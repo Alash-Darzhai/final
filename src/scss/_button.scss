@@ -1,0 +1,98 @@
+.btn {
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.button-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF3E79;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  transition: background-color 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: #41F6D7;
+    transition: background-color 0.5s;
+  }
+}
+
+.button-arrow {
+  background-color: inherit;
+  transition: background-color 0.5s;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: #41F6D7;
+    transition: background-color 0.5s;
+    border-radius: 50%;
+  }
+}
+
+.button-show-more {
+  position: relative;
+  padding: 0 16px 0 48px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+
+  &::after {
+    content: url(./img/icon/read_more.svg);
+    position: absolute;
+    left: 23px;
+  }
+
+  &--brand {
+    display: none;
+  }
+}
+
+.button-show-rotate::after {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .button-show-more {
+    padding-left: 33px;
+
+    &::after {
+      left: 9px;
+    }
+
+    &--brand {
+      display: inline-block;
+      top: 8px;
+      left: 24px;
+    }
+  }
+
+}
+
+@media (min-width: 1120px) {
+
+  .button-show-more--brand {
+    left: 30px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .button-icon {
+    &--main-top {
+      position: relative;
+    }
+
+    &__text {
+      position: absolute;
+      left: -131px;
+      cursor: pointer;
+    }
+  }
+}

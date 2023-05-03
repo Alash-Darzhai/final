@@ -1,0 +1,37 @@
+@import '_colors';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* html задается*/
+  margin: 0;
+  /* через нормалайз делается */
+  padding: 0;
+  /* через нормалайз делается */
+  list-style: none;
+  /* тоже не так делаетя */
+}
+
+.body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  font-size: 14px;
+  font-family: "TT Lakes Medium", sans-serif;
+  line-height: 18px;
+  background-color: $bg-gray;
+  overflow-x: scroll;
+
+  &__header {
+    min-width: 320px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .body {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+}
