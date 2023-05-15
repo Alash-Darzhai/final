@@ -1,16 +1,12 @@
-@import '_colors';
+@import './colors';
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  /* html задается*/
   margin: 0;
-  /* через нормалайз делается */
   padding: 0;
-  /* через нормалайз делается */
   list-style: none;
-  /* тоже не так делаетя */
 }
 
 .body {
@@ -22,6 +18,7 @@
   line-height: 18px;
   background-color: $bg-gray;
   overflow-x: scroll;
+  overflow-y: auto;
 
   &__header {
     min-width: 320px;
@@ -29,8 +26,17 @@
   }
 }
 
+@media (min-width: 768px) {
+  .body {
+    &__main {
+      margin-bottom: 82px;
+    }
+  }
+}
+
 @media (min-width: 1120px) {
   .body {
+    display: flex;
     max-width: 1120px;
     margin: 0 auto;
   }

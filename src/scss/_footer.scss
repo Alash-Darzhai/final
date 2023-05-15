@@ -1,0 +1,38 @@
+@import './colors';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: $gray;
+    opacity: 0.72;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 24px;
+
+        &__year {
+            width: 218px;
+            text-align: left;
+        }
+
+        &__info {
+            width: 213px;
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__info {
+            width: 330px;
+        }
+    }
+}

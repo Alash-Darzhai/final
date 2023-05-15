@@ -1,13 +1,50 @@
 // import Swiper from 'swiper';
 
 import Swiper, { Navigation, Pagination } from 'swiper';
-
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const swiper = new Swiper(".brand-swiper", {
   modules: [Navigation, Pagination],
   loop: true,
   width: 240,
+  // spaceBetween: 16,
+  slidesPerView: "auto",
+  breakpoints: {
+    768: {
+      enabled: false,
+      spaceBetween: 0,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+const swiper2 = new Swiper(".technique-swiper", {
+  modules: [Navigation, Pagination],
+  loop: true,
+  width: 240,
+  // spaceBetween: 16,
+  slidesPerView: "auto",
+  breakpoints: {
+    768: {
+      enabled: false,
+      spaceBetween: 0,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+const swiper3 = new Swiper(".services-swiper", {
+  modules: [Navigation, Pagination],
+  loop: true,
+  width: 240,
   spaceBetween: 16,
+  slidesPerView: "auto",
   breakpoints: {
     768: {
       enabled: false,

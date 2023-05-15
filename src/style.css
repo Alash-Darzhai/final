@@ -373,7 +373,8 @@
   transform: rotate(180deg);
 }
 
-.button-show-more--brand {
+.button-show-more--brand,
+.button-show-more--technique {
   display: none;
 }
 
@@ -386,7 +387,8 @@
     left: 9px;
   }
 
-  .button-show-more--brand {
+  .button-show-more--brand,
+  .button-show-more--technique {
     display: inline-block;
     top: 8px;
     left: 24px;
@@ -395,7 +397,8 @@
 
 @media (min-width: 1120px) {
 
-  .button-show-more--brand {
+  .button-show-more--brand,
+  .button-show-more--technique {
     left: 30px;
   }
 }

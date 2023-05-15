@@ -1,7 +1,7 @@
-@import '_colors';
+@import './colors';
 
 .header {
-  background-color: #FFFFFF;
+  background-color: $white;
 }
 
 .header-nav {

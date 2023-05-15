@@ -1,3 +1,5 @@
+@import './colors';
+
 .brand-swiper {
   overflow: hidden;
 }
@@ -7,9 +9,9 @@
     display: flex;
     justify-content: space-between;
     margin-left: 16px;
-    padding: 16px;
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
+    padding: 13px;
+    background: $white;
+    border: 1px solid $light-gray2;
     border-radius: 6px;
     width: 240px;
     max-height: 78px;
@@ -49,6 +51,10 @@
       height: 72px;
       margin: 0;
     }
+
+    &__pic {
+      width: 50%;
+    }
   }
 }
 
@@ -56,15 +62,23 @@
   .brand {
 
     &__list {
-      column-gap: 32px
+      column-gap: 32px;
+
+      &--big-height {
+        height: 248px;
+      }
     }
 
     &__item {
-      width: 240px;
+      width: 230px;
     }
+  }
+}
 
-    &-slider__big-height {
-      height: 248px;
+@media (min-width: 1440px) {
+  .brand {
+    &__item {
+      width: 240px;
     }
   }
 }
@@ -76,10 +90,10 @@
 
 .swiper-pagination-bullet {
   position: relative;
-  top: 30px;
+  top: 22px;
   width: 12px;
   height: 12px;
-  background: #DDDDDD;
+  background: $light-gray;
 }
 
 
@@ -88,7 +102,6 @@
 
   .swiper-pagination {
     height: 0;
-
   }
 
   .swiper-pagination-bullet {
@@ -115,7 +128,6 @@
   line-height: 24px;
   letter-spacing: -0.2px;
   text-transform: uppercase;
-  color: #7E7E82;
-  background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
-
+  color: $gray;
+  background: linear-gradient(90deg, #F8F8F8 0%, $white 98.61%);
 }

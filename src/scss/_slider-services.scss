@@ -1,0 +1,134 @@
+@import './colors';
+
+.services-swiper {
+  overflow: hidden;
+}
+
+.services {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 8px;
+    padding-left: 8px;
+    padding-top: 16px;
+    background: $white;
+    border: 1px solid $light-gray2;
+    border-radius: 6px;
+    width: 260px;
+    height: 200px;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    padding: 16px;
+  }
+
+  &__text-top {
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    opacity: 0.72;
+  }
+
+  &__text-desc {
+    font-size: 14px;
+    line-height: 18px;
+    color: #1B1C21;
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-swiper {
+    overflow: visible;
+  }
+
+  .services {
+
+    &__subtitle {
+      margin-bottom: 64px;
+      padding: 16px 24px;
+    }
+
+    &__list {
+      position: static;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__item {
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+      gap: 22px;
+      height: 67px;
+      width: -webkit-fill-available;
+      margin: 0 24px;
+      padding: 0 16px;
+      border-radius: 0;
+      border: none;
+      margin-bottom: -3px;
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 63px;
+        border-bottom: 1px solid $light-gray2;
+        width: inherit;
+        margin-right: 18px;
+      }
+    }
+
+    &__text-top {
+      position: absolute;
+      top: -32px;
+    }
+
+    &__text-top,
+    &__text-desc {
+      &--disable {
+        display: none;
+      }
+    }
+
+    &__text-desc {
+
+      margin-bottom: 0;
+    }
+
+    &__wrap {
+      &--grow {
+        min-width: 355px;
+      }
+
+      &--price {
+        min-width: 74px;
+      }
+
+      &--time {
+        min-width: 84px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .services {
+
+    &__list {
+      column-gap: 32px
+    }
+  }
+
+  .services__subtitle {
+    padding: 16px 32px;
+  }
+}
